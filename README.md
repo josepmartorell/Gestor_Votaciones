@@ -10,4 +10,5 @@ Dichos parámetros pueden basarse en superficie en metros cuadrados de la propie
   
   - Obtebner un documento PDF con el resultado de cada votación.
   
+  ![This is an image](screenshots/screenshot-1.png)
  
