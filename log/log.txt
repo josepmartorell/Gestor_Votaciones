@@ -1,0 +1,32 @@
+2019-11-01 11:17:52  usuario1            192.168.002.105      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2019-11-01 11:18:02  usuario1            192.168.002.105      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2019-11-01 11:18:14  usuario1            192.168.002.105      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2019-11-01 11:18:40  usuario1            192.168.002.105      31  Se ha producido una situación de error de E/S al intentar acceder al fichero XML del repositorio              
+2019-11-01 11:18:54  usuario1            192.168.002.105      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2019-11-01 11:19:49  usuario1            192.168.002.105      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2019-11-01 12:14:02  usuario1            192.168.002.105      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2019-11-01 12:14:44  usuario1            192.168.002.105      31  Se ha producido una situación de error de E/S al intentar acceder al fichero XML del repositorio              
+2019-11-01 12:15:01  usuario1            192.168.002.105      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2019-11-01 12:19:31  usuario1            192.168.002.105      40  Se ha producido un error al intentar consultar la relación de titulares                                       
+2019-11-01 12:20:00  usuario1            192.168.002.105      41  Se ha producido un error al intentar consultar el número de titulares existentes                              
+2019-11-01 12:20:37  usuario1            192.168.002.105      51  Se ha producido un error al intentar consultar la relación de votaciones                                      
+2019-11-01 12:21:17  usuario1            192.168.002.105      50  Se ha producido un error al intentar insertar votación                                                        
+2019-11-01 12:21:31  usuario1            192.168.002.105      50  Se ha producido un error al intentar insertar votación                                                        
+2019-11-01 12:23:02  usuario1            192.168.002.105      31  Se ha producido una situación de error de E/S al intentar acceder al fichero XML del repositorio              
+2019-11-01 20:04:37  usuario1            192.168.002.105      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2019-11-25 14:41:01  usuario1            192.168.002.105      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2019-11-25 14:41:29  usuario1            192.168.002.105      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2020-01-05 12:37:57  usuario1            127.000.000.001      40  Se ha producido un error al intentar consultar la relación de titulares                                       
+2020-01-05 12:38:23  usuario1            127.000.000.001      41  Se ha producido un error al intentar consultar el número de titulares existentes                              
+2020-01-05 12:39:01  usuario1            127.000.000.001      50  Se ha producido un error al intentar insertar votación                                                        
+2020-01-05 12:39:30  usuario1            127.000.000.001      51  Se ha producido un error al intentar consultar la relación de votaciones                                      
+2020-01-05 12:40:01  usuario1            127.000.000.001      60  Se ha producido un error al intentar insertar voto emitido                                                    
+2020-01-05 12:40:24  usuario1            127.000.000.001      61  Se ha producido un error al intentar consultar la relación de votos emitidos en una votación                  
+2020-01-05 20:13:08  usuario1            127.000.000.001      40  Se ha producido un error al intentar consultar la relación de titulares                                       
+2020-01-05 20:52:11  usuario1            127.000.000.001      60  Se ha producido un error al intentar insertar voto emitido                                                    
+2022-05-31 19:40:03  usuario1            127.000.001.001      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2022-05-31 20:27:27  usuario1            127.000.001.001      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2022-05-31 20:28:11  usuario1            127.000.001.001      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2022-05-31 20:29:00  usuario1            127.000.001.001      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2022-05-31 20:29:14  usuario1            127.000.001.001      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2022-05-31 20:31:22  usuario1            127.000.001.001      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 

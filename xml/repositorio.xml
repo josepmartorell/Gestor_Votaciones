@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<REPOSITORIO>
+   <BASES_DE_DATOS>
+      <BASE_DATOS_SELECCIONADA>MySQL</BASE_DATOS_SELECCIONADA>
+      <BASE_DATOS nombre="Oracle">
+         <CLASS_DRIVER>oracle.jdbc.driver.OracleDriver</CLASS_DRIVER>
+         <URL_CONEXION>jdbc:oracle:thin:@localhost:1521:ORCL</URL_CONEXION>
+         <USUARIO>scott</USUARIO>
+         <PASSWORD>tiger</PASSWORD>
+      </BASE_DATOS> 
+      <BASE_DATOS nombre="MySQL">
+         <CLASS_DRIVER>com.mysql.cj.jdbc.Driver</CLASS_DRIVER>
+         <URL_CONEXION>jdbc:mysql://localhost:3306/votaciones</URL_CONEXION>
+         <USUARIO>root</USUARIO>
+         <PASSWORD>root123</PASSWORD>
+      </BASE_DATOS>     
+   </BASES_DE_DATOS>
+   <SISTEMA_ARCHIVOS>
+        <RUTA_CREACION>D:\\PDFs_creados\\</RUTA_CREACION>
+   </SISTEMA_ARCHIVOS>
+</REPOSITORIO>
