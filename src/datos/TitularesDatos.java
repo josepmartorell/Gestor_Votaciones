@@ -12,55 +12,55 @@ import java.util.List;
 
 public class TitularesDatos {
  
-public List<Titular> consultarTodos(Connection connection) throws Exception
-{
-    List<Titular> listaCopropietarios = new ArrayList();
-    ResultSet resultSet = null;
-    Statement statement = null;
-    try {
-            String sql = "SELECT * FROM titulares ORDER BY codigo";
-            statement = connection.createStatement();
-            resultSet = statement.executeQuery(sql); 
-            while (resultSet.next()) { 
-               Titular copropietario = new Titular();
-               copropietario.setCodigo(resultSet.getString(1));
-               copropietario.setNombre(resultSet.getString(2));
-               copropietario.setCuotaParticipacion(resultSet.getDouble(3)); 
-               listaCopropietarios.add(copropietario);
-            } 
-        } catch (SQLException excepcion) {
-            throw new GenericaExcepcion(40);
-        } finally
-        {
-            if (resultSet != null) resultSet.close(); 
-            if (statement != null) statement.close();
-        }
+    public List<Titular> consultarTodos(Connection connection) throws Exception
+    {
+        List<Titular> listaCopropietarios = new ArrayList();
+        ResultSet resultSet = null;
+        Statement statement = null;
+        try {
+                String sql = "SELECT * FROM titulares ORDER BY codigo";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(sql); 
+                while (resultSet.next()) { 
+                   Titular copropietario = new Titular();
+                   copropietario.setCodigo(resultSet.getString(1));
+                   copropietario.setNombre(resultSet.getString(2));
+                   copropietario.setCuotaParticipacion(resultSet.getDouble(3)); 
+                   listaCopropietarios.add(copropietario);
+                } 
+            } catch (SQLException excepcion) {
+                throw new GenericaExcepcion(40);
+            } finally
+            {
+                if (resultSet != null) resultSet.close(); 
+                if (statement != null) statement.close();
+            }
 
-    return listaCopropietarios;
-}  
+        return listaCopropietarios;
+    }  
 
 
-public Integer consultarNumeroFilas(Connection connection) throws Exception
-{
-    Integer numFilas = null;
-    ResultSet resultSet = null;
-    Statement statement = null; 
-    String sql = "SELECT COUNT(*) FROM titulares";
+    public Integer consultarNumeroFilas(Connection connection) throws Exception
+    {
+        Integer numFilas = null;
+        ResultSet resultSet = null;
+        Statement statement = null; 
+        String sql = "SELECT COUNT(*) FROM titulares";
 
-    try {
-            statement = connection.createStatement(); 
-            resultSet = statement.executeQuery(sql);
-            if (resultSet.next()) {
-               numFilas = resultSet.getInt(1);          
-            }   
-        } catch (SQLException excepcion) {
-            throw new GenericaExcepcion(41);
-        } finally
-        {
-            if (resultSet != null) resultSet.close(); 
-            if (statement != null) statement.close();
-        }
+        try {
+                statement = connection.createStatement(); 
+                resultSet = statement.executeQuery(sql);
+                if (resultSet.next()) {
+                   numFilas = resultSet.getInt(1);          
+                }   
+            } catch (SQLException excepcion) {
+                throw new GenericaExcepcion(41);
+            } finally
+            {
+                if (resultSet != null) resultSet.close(); 
+                if (statement != null) statement.close();
+            }
 
-    return numFilas;
-}    
+        return numFilas;
+    }    
 }

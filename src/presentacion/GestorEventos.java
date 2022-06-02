@@ -1,6 +1,7 @@
 
 package presentacion;
 
+import excepciones.GestorExcepciones;
 import encapsuladores.BaseDatos;
 import encapsuladores.SistemaArchivos;
 import encapsuladores.Votacion;
