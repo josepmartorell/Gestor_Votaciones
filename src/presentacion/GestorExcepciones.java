@@ -1,8 +1,7 @@
 
-package presentacion;
+package excepciones;
 
 import encapsuladores.Contexto;
-import excepciones.GenericaExcepcion;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 import negocio.IncidenciasNegocio;

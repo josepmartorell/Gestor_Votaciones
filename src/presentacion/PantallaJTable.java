@@ -1,6 +1,7 @@
 
 package presentacion;
 
+import excepciones.GestorExcepciones;
 import encapsuladores.BaseDatos;
 import encapsuladores.Contexto;
 import encapsuladores.Votacion;
@@ -36,6 +37,7 @@ public class PantallaJTable extends JFrame {
               contexto = new Contexto("usuario1", obtenerIP());
               repositorio = new RepositorioNegocio().cargarRepositorio();
               setSize(1200,900);
+              setLocationRelativeTo(null);
               setTitle("Votación propuesta");
               Componentes componentes = new Componentes();
               componentes.setPantallaJTable(this);
