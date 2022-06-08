@@ -19,10 +19,12 @@ public class Componentes {
     private JScrollPane JScrollpaneTabla;
     private JLabel[] visualizaNumVotos = new JLabel[4];
     private double[] contadorVotos = {0,0,0,0};
+    private JButton botonCargaSociedad; 
     private JButton botonCargaVotacion;     
     private JButton botonNuevaVotacion;    
     private JButton botonGuardaVotacion;
     private JComboBox seleccionIdVotacion;
+    private JComboBox seleccionIdSociedad;    
     private JLabel etiquetaTemaVotado;
     private JTextField jTextFieldTemaVotado;
     private int filaActualizada;
@@ -108,6 +110,15 @@ public class Componentes {
         this.contadorVotos = contadorVotos;
     }
 
+    public JButton getBotonCargaSociedad() {
+        return botonCargaSociedad;
+    }
+
+    public void setBotonCargaSociedad(JButton botonCargaSociedad) {
+        this.botonCargaSociedad = botonCargaSociedad;
+    }
+    
+
     public JButton getBotonCargaVotacion() {
         return botonCargaVotacion;
     }
@@ -132,6 +143,14 @@ public class Componentes {
         this.botonGuardaVotacion = botonGuardaVotacion;
     }
 
+    public JComboBox getSeleccionIdSociedad() {
+        return seleccionIdSociedad;
+    }
+
+    public void setSeleccionIdSociedad(JComboBox seleccionIdSociedad) {
+        this.seleccionIdSociedad = seleccionIdSociedad;
+    }
+    
     public JComboBox getSeleccionIdVotacion() {
         return seleccionIdVotacion;
     }

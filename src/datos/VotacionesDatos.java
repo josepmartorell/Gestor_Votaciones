@@ -16,10 +16,11 @@ public class VotacionesDatos {
     public void insertar(Connection connection, Votacion votacion) throws Exception
     {   PreparedStatement preparedStatement = null;
         try {    
-                String sql = "INSERT INTO votaciones VALUES(?,?)";          
+                String sql = "INSERT INTO votaciones VALUES(?,?,?)";          
                 preparedStatement = connection.prepareStatement(sql); 
                 preparedStatement.setString(1, votacion.getIdVotacion());
                 preparedStatement.setString(2, votacion.getTemaVotado()); 
+                preparedStatement.setString(3, votacion.getCifSociedad());
                 preparedStatement.executeUpdate();
             } catch (SQLException excepcion) {           
                 throw new GenericaExcepcion(50);

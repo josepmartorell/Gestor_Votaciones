@@ -30,3 +30,44 @@
 2022-05-31 20:29:00  usuario1            127.000.001.001      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
 2022-05-31 20:29:14  usuario1            127.000.001.001      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
 2022-05-31 20:31:22  usuario1            127.000.001.001      20  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2022-06-06 18:33:34  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-06 18:54:31  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-06 18:54:38  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-07 22:00:24  usuario1            127.000.001.001       0  null                                                                                                          
+2022-06-07 22:01:46  usuario1            127.000.001.001       0  null                                                                                                          
+2022-06-07 22:02:43  usuario1            127.000.001.001       0  null                                                                                                          
+2022-06-07 22:03:17  usuario1            127.000.001.001       0  null                                                                                                          
+2022-06-08 09:59:57  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 10:46:01  usuario1            127.000.001.001      51  Se ha producido un error al intentar consultar la relación de votaciones                                      
+2022-06-08 10:49:44  usuario1            127.000.001.001      51  Se ha producido un error al intentar consultar la relación de votaciones                                      
+2022-06-08 10:50:32  usuario1            127.000.001.001      51  Se ha producido un error al intentar consultar la relación de votaciones                                      
+2022-06-08 10:50:52  usuario1            127.000.001.001      51  Se ha producido un error al intentar consultar la relación de votaciones                                      
+2022-06-08 10:56:54  usuario1            127.000.001.001      51  Se ha producido un error al intentar consultar la relación de votaciones                                      
+2022-06-08 11:00:07  usuario1            127.000.001.001      51  Se ha producido un error al intentar consultar la relación de votaciones                                      
+2022-06-08 11:03:39  usuario1            127.000.001.001      51  Se ha producido un error al intentar consultar la relación de votaciones                                      
+2022-06-08 11:30:16  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 11:30:24  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 11:30:31  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 11:32:06  usuario1            127.000.001.001      60  Se ha producido un error al intentar insertar voto emitido                                                    
+2022-06-08 11:33:28  usuario1            127.000.001.001      60  Se ha producido un error al intentar insertar voto emitido                                                    
+2022-06-08 11:37:26  usuario1            127.000.001.001       0  Index 7 out of bounds for length 7                                                                            
+2022-06-08 11:40:39  usuario1            127.000.001.001      60  Se ha producido un error al intentar insertar voto emitido                                                    
+2022-06-08 11:42:08  usuario1            127.000.001.001      60  Se ha producido un error al intentar insertar voto emitido                                                    
+2022-06-08 11:42:16  usuario1            127.000.001.001      60  Se ha producido un error al intentar insertar voto emitido                                                    
+2022-06-08 11:44:18  usuario1            127.000.001.001       0  Index 7 out of bounds for length 7                                                                            
+2022-06-08 11:45:02  usuario1            127.000.001.001       0  Index 7 out of bounds for length 7                                                                            
+2022-06-08 16:20:41  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 16:22:47  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 16:23:08  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 16:50:08  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 16:52:28  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 16:54:09  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 17:02:40  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 17:03:51  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 17:04:22  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 17:07:56  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 17:09:08  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 17:31:15  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 17:31:29  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 17:35:03  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
+2022-06-08 17:40:26  usuario1            127.000.001.001      50  Se ha producido un error al intentar insertar votación                                                        
