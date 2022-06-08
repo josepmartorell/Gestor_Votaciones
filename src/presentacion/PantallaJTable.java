@@ -5,6 +5,7 @@ import excepciones.GestorExcepciones;
 import encapsuladores.BaseDatos;
 import encapsuladores.Contexto;
 import encapsuladores.Votacion;
+import encapsuladores.Sociedad;
 import java.awt.Color;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -22,6 +23,7 @@ import javax.swing.table.TableColumn;
 import negocio.RepositorioNegocio;
 import negocio.TitularesNegocio;
 import negocio.VotacionesNegocio;
+import negocio.SociedadesNegocio;
 import javax.swing.SwingUtilities;
 
 
@@ -111,39 +113,58 @@ public class PantallaJTable extends JFrame {
            add(componentes.getVisualizaNumVotos(i)); 
         }
         
+        componentes.setBotonCargaSociedad(new JButton("Carga sociedad"));
+        componentes.getBotonCargaSociedad().setBounds(100, 600, 150, 35);
+        componentes.getBotonCargaSociedad().addActionListener(gestorEventos);     // REGISTRO DE ESCUCHA DE EVENTO DE BOTON
+        add(componentes.getBotonCargaSociedad());
+        
+        componentes.setSeleccionIdSociedad(new JComboBox());
+        componentes.getSeleccionIdSociedad().setBounds(400, 610, 600, 20);
+        componentes.getSeleccionIdSociedad().setBackground(Color.white);
+        add(componentes.getSeleccionIdSociedad());
+        cargarComboSociedades(componentes);
+        
         componentes.setBotonCargaVotacion(new JButton("Carga votación"));
-        componentes.getBotonCargaVotacion().setBounds(100, 600, 150, 50);
+        componentes.getBotonCargaVotacion().setBounds(100, 650, 150, 35);
         componentes.getBotonCargaVotacion().addActionListener(gestorEventos);     // REGISTRO DE ESCUCHA DE EVENTO DE BOTON
         add(componentes.getBotonCargaVotacion());
-        
+              
         componentes.setSeleccionIdVotacion(new JComboBox());
-        componentes.getSeleccionIdVotacion().setBounds(400, 620, 600, 20);
+        componentes.getSeleccionIdVotacion().setBounds(400, 660, 600, 20);
         componentes.getSeleccionIdVotacion().setBackground(Color.white);
         add(componentes.getSeleccionIdVotacion());
         cargarComboVotaciones(componentes);
         
         componentes.setBotonNuevaVotacion(new JButton("Nueva votación"));
-        componentes.getBotonNuevaVotacion().setBounds(100, 675, 150, 50);
+        componentes.getBotonNuevaVotacion().setBounds(100, 700, 150, 35);
         componentes.getBotonNuevaVotacion().addActionListener(gestorEventos);     // REGISTRO DE ESCUCHA DE EVENTO DE BOTON
         add(componentes.getBotonNuevaVotacion());
         
         componentes.setEtiquetaTemaVotado(new JLabel("Tema votado"));
-        componentes.getEtiquetaTemaVotado().setBounds(300, 675, 150, 50);
+        componentes.getEtiquetaTemaVotado().setBounds(300, 692, 150, 50);
         add(componentes.getEtiquetaTemaVotado());
         
         componentes.setjTextFieldTemaVotado(new JTextField());
-        componentes.getjTextFieldTemaVotado().setBounds(400, 695, 600, 20);
+        componentes.getjTextFieldTemaVotado().setBounds(400, 710, 600, 20);
         add(componentes.getjTextFieldTemaVotado());       
         
         componentes.setBotonGuardaVotacion(new JButton("Guarda votación"));
-        componentes.getBotonGuardaVotacion().setBounds(100, 750, 150, 50);
+        componentes.getBotonGuardaVotacion().setBounds(100, 750, 150, 35);
         componentes.getBotonGuardaVotacion().addActionListener(gestorEventos);     // REGISTRO DE ESCUCHA DE EVENTO DE BOTON
         add(componentes.getBotonGuardaVotacion());        
         
         return componentes;
     }
         
-    
+    public void cargarComboSociedades(Componentes componentes) throws Exception {
+        componentes.getSeleccionIdSociedad().removeAllItems();
+        List<Sociedad> listaSociedades = new SociedadesNegocio().consultarTodasSociedades((BaseDatos)componentes.getRepositorio()[0]);
+        for (int i=0; i<listaSociedades.size(); i++)
+        {
+            Sociedad sociedad = listaSociedades.get(i);
+            componentes.getSeleccionIdSociedad().addItem(sociedad.getCif()+"  /  "+sociedad.getRazonSocial());
+        }
+    }
     
     public void cargarComboVotaciones(Componentes componentes) throws Exception {
         componentes.getSeleccionIdVotacion().removeAllItems();

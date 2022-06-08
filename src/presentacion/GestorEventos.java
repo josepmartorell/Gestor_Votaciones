@@ -73,6 +73,7 @@ public class GestorEventos extends WindowAdapter implements ActionListener, Tabl
             Votacion votacion = new Votacion();
             votacion.setIdVotacion(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date()));
             votacion.setTemaVotado(componentes.getjTextFieldTemaVotado().getText());
+            votacion.setCifSociedad("H-37846572");
             
             try {
                 new VotacionesNegocio().guardarVotacion((BaseDatos)componentes.getRepositorio()[0], (SistemaArchivos)componentes.getRepositorio()[1], votacion, componentes.getModeloDatos().getDatos(), componentes.getContadorVotos());
