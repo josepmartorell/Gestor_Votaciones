@@ -21,6 +21,7 @@ import negocio.VotacionesNegocio;
 public class GestorEventos extends WindowAdapter implements ActionListener, TableModelListener {
 
     private final Componentes componentes;
+    private Sociedad sociedadCargada;
     
     public GestorEventos(Componentes componentes) {
         this.componentes = componentes;
@@ -49,6 +50,7 @@ public class GestorEventos extends WindowAdapter implements ActionListener, Tabl
                 Sociedad sociedad = new Sociedad();
                 sociedad.setCif(componentes.getSeleccionIdSociedad().getSelectedItem().toString().substring(0, 10));
                 System.out.println(sociedad.getCif());
+                sociedadCargada = sociedad;
              }
          }  
         else
@@ -57,7 +59,7 @@ public class GestorEventos extends WindowAdapter implements ActionListener, Tabl
             if (componentes.getSeleccionIdVotacion().getSelectedItem() != null)
              {
                 Votacion votacion = new Votacion();
-                votacion.setIdVotacion(componentes.getSeleccionIdVotacion().getSelectedItem().toString().substring(0, 19));    
+                votacion.setIdVotacion(componentes.getSeleccionIdVotacion().getSelectedItem().toString().substring(15, 34));    
                 
                 try {
                     componentes.getModeloDatos().cargarVotacion(new VotacionesNegocio().consultarResultadoVotacion((BaseDatos)componentes.getRepositorio()[0], votacion));
@@ -66,7 +68,7 @@ public class GestorEventos extends WindowAdapter implements ActionListener, Tabl
                 
                 for (int k=0; k<=3; k++)
                    componentes.getVisualizaNumVotos(k).setText(decimalFormat.format(componentes.getContadorVotos(k)));                 
-                componentes.getjTextFieldTemaVotado().setText(componentes.getSeleccionIdVotacion().getSelectedItem().toString().substring(24)); 
+                componentes.getjTextFieldTemaVotado().setText(componentes.getSeleccionIdVotacion().getSelectedItem().toString().substring(39)); 
              }
          }  
         else
@@ -84,7 +86,7 @@ public class GestorEventos extends WindowAdapter implements ActionListener, Tabl
             Votacion votacion = new Votacion();
             votacion.setIdVotacion(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date()));
             votacion.setTemaVotado(componentes.getjTextFieldTemaVotado().getText());
-            votacion.setCifSociedad("H-37846572");
+            votacion.setCifSociedad(sociedadCargada.getCif());
             
             try {
                 new VotacionesNegocio().guardarVotacion((BaseDatos)componentes.getRepositorio()[0], (SistemaArchivos)componentes.getRepositorio()[1], votacion, componentes.getModeloDatos().getDatos(), componentes.getContadorVotos());

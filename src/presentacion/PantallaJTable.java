@@ -174,7 +174,7 @@ public class PantallaJTable extends JFrame {
         for (int i=0; i<listaVotaciones.size(); i++)
         {
             Votacion votacion = listaVotaciones.get(i);
-            componentes.getSeleccionIdVotacion().addItem(votacion.getIdVotacion()+"     "+votacion.getTemaVotado());
+            componentes.getSeleccionIdVotacion().addItem(votacion.getCifSociedad()+"  /  "+votacion.getIdVotacion()+"     "+votacion.getTemaVotado());
         }
     }
 
