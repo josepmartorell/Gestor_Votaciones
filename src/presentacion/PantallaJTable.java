@@ -159,10 +159,12 @@ public class PantallaJTable extends JFrame {
     public void cargarComboSociedades(Componentes componentes) throws Exception {
         componentes.getSeleccionIdSociedad().removeAllItems();
         List<Sociedad> listaSociedades = new SociedadesNegocio().consultarTodasSociedades((BaseDatos)componentes.getRepositorio()[0]);
+        System.out.println("cargando lista de sociedades...");
         for (int i=0; i<listaSociedades.size(); i++)
         {
             Sociedad sociedad = listaSociedades.get(i);
             componentes.getSeleccionIdSociedad().addItem(sociedad.getCif()+"  /  "+sociedad.getRazonSocial());
+            System.out.println(sociedad.getCif());
         }
     }
     

@@ -148,18 +148,7 @@ INSERT INTO sociedades (cif, razon_social, domicilio_social, domicilio_fiscal, c
 
 INSERT INTO sociedades (cif, razon_social, domicilio_social, domicilio_fiscal, cnae_actividad) VALUES ("B-47560974", "Torre Glòries Soft", "Avinguda Diagonal 221 08018 BARCELONA", "Avinguda Diagonal 221 08018 BARCELONA", 2009);
 
--- titulares adscritos a las sociedades (Torre Glòries Soft)----
-
-INSERT INTO titulares (codigo,nombre,cuota_participacion, cif_sociedad) VALUES (LPAD(FORMAT(secuencia_next_valor("secuencia_codigo_titular"),0),3,'0'),'MARTÍNEZ COVEDO, OSCAR',1.143, "B-47560974");
-
-INSERT INTO titulares (codigo,nombre,cuota_participacion, cif_sociedad) VALUES (LPAD(FORMAT(secuencia_next_valor("secuencia_codigo_titular"),0),3,'0'),'BONIFACIO ESCUER, VICENTE',0.765, "B-47560974");
-
-INSERT INTO titulares (codigo,nombre,cuota_participacion, cif_sociedad) VALUES (LPAD(FORMAT(secuencia_next_valor("secuencia_codigo_titular"),0),3,'0'),'MARTORELL  MARTIN, ELOI',1.937, "B-47560974");
-
-INSERT INTO titulares (codigo,nombre,cuota_participacion, cif_sociedad) VALUES (LPAD(FORMAT(secuencia_next_valor("secuencia_codigo_titular"),0),3,'0'),'MARTORELL MARTORELL, JOSEP',1.480, "B-47560974");
-
-
--- titulares adscritos a las sociedades (Comunidad de Propietarios MONTES DE IBERIA) ----
+-- titulares adscritos a la sociedad (Comunidad de Propietarios MONTES DE IBERIA) ----
 
 INSERT INTO titulares (codigo,nombre,cuota_participacion, cif_sociedad) VALUES (LPAD(FORMAT(secuencia_next_valor("secuencia_codigo_titular"),0),3,'0'),'ALARCON LAGUNA, CONCEPCION',1.143, "H-37846572");
 
@@ -295,5 +284,14 @@ INSERT INTO titulares (codigo,nombre,cuota_participacion, cif_sociedad) VALUES (
 
 INSERT INTO titulares (codigo,nombre,cuota_participacion, cif_sociedad) VALUES (LPAD(FORMAT(secuencia_next_valor("secuencia_codigo_titular"),0),3,'0'),'ZARAGOZA ASENSI, ROSA',1.458, "H-37846572");
 
+-- titulares adscritos a la sociedad (Torre Glòries Soft)----
+
+INSERT INTO titulares (codigo,nombre,cuota_participacion, cif_sociedad) VALUES (LPAD(FORMAT(secuencia_next_valor("secuencia_codigo_titular"),0),3,'0'),'MARTÍNEZ COVEDO, OSCAR',1.143, "B-47560974");
+
+INSERT INTO titulares (codigo,nombre,cuota_participacion, cif_sociedad) VALUES (LPAD(FORMAT(secuencia_next_valor("secuencia_codigo_titular"),0),3,'0'),'BONIFACIO ESCUER, VICENTE',0.765, "B-47560974");
+
+INSERT INTO titulares (codigo,nombre,cuota_participacion, cif_sociedad) VALUES (LPAD(FORMAT(secuencia_next_valor("secuencia_codigo_titular"),0),3,'0'),'MARTINEZ  MARIN, GUSTAVO',1.937, "B-47560974");
+
+INSERT INTO titulares (codigo,nombre,cuota_participacion, cif_sociedad) VALUES (LPAD(FORMAT(secuencia_next_valor("secuencia_codigo_titular"),0),3,'0'),'GUERRERO TORRES, ALBERTO',1.480, "B-47560974");
 
 COMMIT;

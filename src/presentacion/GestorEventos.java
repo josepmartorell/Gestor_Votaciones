@@ -4,6 +4,7 @@ package presentacion;
 import excepciones.GestorExcepciones;
 import encapsuladores.BaseDatos;
 import encapsuladores.SistemaArchivos;
+import encapsuladores.Sociedad;
 import encapsuladores.Votacion;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -40,7 +41,17 @@ public class GestorEventos extends WindowAdapter implements ActionListener, Tabl
       
         JButton jButton = (JButton) e.getSource();
         
-        
+        if (jButton == componentes.getBotonCargaSociedad())     //  BOTON Carga Votacion
+         {  
+            System.out.println("cargando sociedad especifica...");
+            if (componentes.getSeleccionIdVotacion().getSelectedItem() != null)
+             {
+                Sociedad sociedad = new Sociedad();
+                sociedad.setCif(componentes.getSeleccionIdSociedad().getSelectedItem().toString().substring(0, 10));
+                System.out.println(sociedad.getCif());
+             }
+         }  
+        else
         if (jButton == componentes.getBotonCargaVotacion())     //  BOTON Carga Votacion
          {  
             if (componentes.getSeleccionIdVotacion().getSelectedItem() != null)
