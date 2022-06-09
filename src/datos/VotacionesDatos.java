@@ -37,13 +37,14 @@ public class VotacionesDatos {
         ResultSet resultSet = null;
         Statement statement = null;
         try {
-                String sql = "SELECT * FROM votaciones ORDER BY tema_votado, id_votacion";
+                String sql = "SELECT * FROM votaciones ORDER BY cif_sociedad, tema_votado, id_votacion";
                 statement = connection.createStatement();
                 resultSet = statement.executeQuery(sql); 
                 while (resultSet.next()) { 
                    Votacion votacion = new Votacion();             
                    votacion.setIdVotacion(resultSet.getString(1));
                    votacion.setTemaVotado(resultSet.getString(2));
+                   votacion.setCifSociedad(resultSet.getString(3));
                    listaVotaciones.add(votacion);
                 } 
             } catch (SQLException excepcion) {
