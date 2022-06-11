@@ -14,6 +14,7 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import negocio.VotacionesNegocio;
@@ -72,7 +73,7 @@ public class GestorEventos extends WindowAdapter implements ActionListener, Tabl
              }
          }  
         else
-        if (jButton == componentes.getBotonNuevaVotacion())     //  BOTON Nueva Votacion
+        if (jButton == componentes.getBotonNuevaVotacion() && sociedadCargada != null)     //  BOTON Nueva Votacion
          { 
             componentes.getModeloDatos().inicializarVotacion();
             for (int k=0; k<=3; k++)
@@ -81,7 +82,7 @@ public class GestorEventos extends WindowAdapter implements ActionListener, Tabl
             componentes.getjTextFieldTemaVotado().setText("");
          }  
         else
-        if (jButton == componentes.getBotonGuardaVotacion())    //  BOTON Guarda Votacion
+        if (jButton == componentes.getBotonGuardaVotacion() && sociedadCargada != null)    //  BOTON Guarda Votacion
          { 
             Votacion votacion = new Votacion();
             votacion.setIdVotacion(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date()));
@@ -93,7 +94,7 @@ public class GestorEventos extends WindowAdapter implements ActionListener, Tabl
                 componentes.getPantallaJTable().cargarComboVotaciones(componentes);                
             } catch (Exception exception) 
                    {  new GestorExcepciones().gestionarExcepcion(exception, componentes.getContexto()); }                
-         }                  
+         } else {JOptionPane.showMessageDialog(componentes.getPantallaJTable(), "Debe seleccionar y guardar previamente la sociedad");}                
     }            
     
     
