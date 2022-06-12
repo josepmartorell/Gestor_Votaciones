@@ -146,7 +146,7 @@ CALL crea_secuencia("secuencia_codigo_titular", 1, 1);
 
 INSERT INTO sociedades (cif, razon_social, domicilio_social, domicilio_fiscal, cnae_actividad) VALUES ("H-37846572", "Comunidad de Propietarios MONTES DE IBERIA", "C. Montes de Iberia, 4 28055 Madrid", "C. Montes de Iberia, 4 28055 Madrid", 9499);
 
-INSERT INTO sociedades (cif, razon_social, domicilio_social, domicilio_fiscal, cnae_actividad) VALUES ("B-47560974", "Torre Glòries Soft", "Avinguda Diagonal 221 08018 BARCELONA", "Avinguda Diagonal 221 08018 BARCELONA", 2009);
+INSERT INTO sociedades (cif, razon_social, domicilio_social, domicilio_fiscal, cnae_actividad) VALUES ("B-47560974", "Junta General de socios Torre Glòries Soft SL", "Avinguda Diagonal 221 08018 BARCELONA", "Avinguda Diagonal 221 08018 BARCELONA", 2009);
 
 -- titulares adscritos a la sociedad (Comunidad de Propietarios MONTES DE IBERIA) ----
 

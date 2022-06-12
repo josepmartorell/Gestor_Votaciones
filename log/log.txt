@@ -2,3 +2,7 @@
 2022-06-11 15:50:20  usuario1            127.000.001.001       0  null                                                                                                          
 2022-06-11 15:56:48  usuario1            127.000.001.001      40  Se ha producido un error al intentar consultar la relación de titulares                                       
 2022-06-11 16:29:20  usuario1            127.000.001.001       0  null                                                                                                          
+2022-06-11 19:15:30  usuario1            127.000.001.001      40  Se ha producido un error al intentar consultar la relación de titulares                                       
+2022-06-11 19:16:50  usuario1            127.000.001.001      40  Se ha producido un error al intentar consultar la relación de titulares                                       
+2022-06-12 16:53:48  usuario1            127.000.001.001      40  Se ha producido un error al intentar consultar la relación de titulares                                       
+2022-06-12 19:21:27  usuario1            127.000.001.001      40  Se ha producido un error al intentar consultar la relación de titulares                                       
