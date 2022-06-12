@@ -18,7 +18,7 @@ public class TitularesDatos {
         ResultSet resultSet = null;
         Statement statement = null;
         try {
-                String sql = "SELECT * FROM titulares ORDER BY codigo";
+                String sql = "SELECT * FROM titulares ORDER BY nombre";
                 statement = connection.createStatement();
                 resultSet = statement.executeQuery(sql); 
                 while (resultSet.next()) { 

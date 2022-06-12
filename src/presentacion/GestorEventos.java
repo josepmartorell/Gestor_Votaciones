@@ -46,7 +46,7 @@ public class GestorEventos extends WindowAdapter implements ActionListener, Tabl
         if (jButton == componentes.getBotonCargaSociedad())     //  BOTON Carga Votacion
          {  
             System.out.println("cargando sociedad especifica...");
-            if (componentes.getSeleccionIdVotacion().getSelectedItem() != null)
+            if (componentes.getSeleccionIdVotacion().getSelectedItem() != null || componentes.getSeleccionIdVotacion().getSelectedItem() == null)
              {
                 Sociedad sociedad = new Sociedad();
                 sociedad.setCif(componentes.getSeleccionIdSociedad().getSelectedItem().toString().substring(0, 10));
