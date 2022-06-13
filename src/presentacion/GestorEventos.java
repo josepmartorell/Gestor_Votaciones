@@ -13,16 +13,20 @@ import java.awt.event.WindowEvent;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
+import negocio.TitularesNegocio;
 import negocio.VotacionesNegocio;
 
 public class GestorEventos extends WindowAdapter implements ActionListener, TableModelListener {
 
     private final Componentes componentes;
     private Sociedad sociedadCargada;
+    private ModeloDatos modeloDatos;
     
     public GestorEventos(Componentes componentes) {
         this.componentes = componentes;
@@ -52,6 +56,11 @@ public class GestorEventos extends WindowAdapter implements ActionListener, Tabl
                 sociedad.setCif(componentes.getSeleccionIdSociedad().getSelectedItem().toString().substring(0, 10));
                 System.out.println(sociedad.getCif());
                 sociedadCargada = sociedad;
+                try {
+                    componentes.getModeloDatos().cargarTitulares(new TitularesNegocio().consultarSocios((BaseDatos)componentes.getRepositorio()[0], sociedadCargada));
+                } catch (Exception ex) {
+                    Logger.getLogger(GestorEventos.class.getName()).log(Level.SEVERE, null, ex);
+                }
              }
          }  
         else

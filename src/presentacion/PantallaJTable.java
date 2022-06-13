@@ -30,6 +30,7 @@ import javax.swing.SwingUtilities;
 public class PantallaJTable extends JFrame {
     
       private Contexto contexto = null;
+      private Sociedad sociedadCargada = null;
       
     public PantallaJTable() {
         
@@ -46,7 +47,11 @@ public class PantallaJTable extends JFrame {
               componentes.setRepositorio(repositorio);
               componentes.setContexto(contexto);
               ubicarComponentes(componentes);
+              if(sociedadCargada != null){
+                componentes.getModeloDatos().cargarTitulares(new TitularesNegocio().consultarSocios((BaseDatos)componentes.getRepositorio()[0], sociedadCargada));
+              }else{
               componentes.getModeloDatos().cargarTitulares(new TitularesNegocio().consultarTodos((BaseDatos)componentes.getRepositorio()[0])); 
+              }
               setVisible(true);              
         } catch (Exception exception)
            {  new GestorExcepciones().gestionarExcepcion(exception, contexto); } 
@@ -178,7 +183,14 @@ public class PantallaJTable extends JFrame {
         }
     }
 
+    public Sociedad getSociedadCargada() {
+        return sociedadCargada;
+    }
 
+    public void setSociedadCargada(Sociedad sociedadCargada) {
+        this.sociedadCargada = sociedadCargada;
+    }
+    
     
     public static void main(String[] args) {
         
