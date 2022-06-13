@@ -4,11 +4,33 @@ package negocio;
 import datos.ConexionBaseDatos;
 import datos.TitularesDatos;
 import encapsuladores.BaseDatos;
+import encapsuladores.Sociedad;
 import encapsuladores.Titular;
 import java.sql.Connection;
 import java.util.List;
 
 public class TitularesNegocio {
+    
+    public List<Titular> consultarSocios(BaseDatos baseDatos, Sociedad sociedadCargada) throws Exception
+     {
+        Connection connection=null;       
+        ConexionBaseDatos conexionBaseDatos = new ConexionBaseDatos();
+        List<Titular> listaCopropietarios = null;
+
+      try {
+            connection = conexionBaseDatos.abrirConexion(baseDatos);                           
+            listaCopropietarios = new TitularesDatos().consultarSocios(connection, sociedadCargada);
+          } catch (Exception excepcion)
+              {  
+                throw excepcion; 
+              }   
+            finally
+              {
+                 conexionBaseDatos.cerrarConexion(connection);         
+              }   
+
+         return listaCopropietarios;                                 
+     } 
     
     public List<Titular> consultarTodos(BaseDatos baseDatos) throws Exception
      {

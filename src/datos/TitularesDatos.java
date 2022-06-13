@@ -1,9 +1,11 @@
 
 package datos;
 
+import encapsuladores.Sociedad;
 import encapsuladores.Titular;
 import excepciones.GenericaExcepcion;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -11,6 +13,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TitularesDatos {
+    
+    public List<Titular> consultarSocios(Connection connection, Sociedad sociedadCargada) throws Exception
+    {
+        List<Titular> listaCopropietarios = new ArrayList();
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        try {
+                String sql = "SELECT * FROM titulares WHERE cif_sociedad = ? ORDER BY nombre;";
+                preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.setString(1, sociedadCargada.getCif());
+                resultSet = preparedStatement.executeQuery(); 
+                while (resultSet.next()) { 
+                   Titular copropietario = new Titular();
+                   copropietario.setCodigo(resultSet.getString(1));
+                   copropietario.setNombre(resultSet.getString(2));
+                   copropietario.setCuotaParticipacion(resultSet.getDouble(3)); 
+                   listaCopropietarios.add(copropietario);
+                } 
+            } catch (SQLException excepcion) {
+                throw new GenericaExcepcion(40);
+            } finally
+            {
+                if (resultSet != null) resultSet.close(); 
+                if (preparedStatement != null) preparedStatement.close();
+            }
+
+        return listaCopropietarios;
+    } 
  
     public List<Titular> consultarTodos(Connection connection) throws Exception
     {
